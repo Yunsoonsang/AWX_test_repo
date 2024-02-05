@@ -1,6 +1,6 @@
 ---
 - name: AWX에서 로컬 manager에게 docker-swarm 명령 보내기
-  host: localhost
+  hosts: localhost
   become: yes
   gather_facts: yes
 
@@ -14,11 +14,11 @@
             - node.role == worker
           replicas_max_per_node: 3
         reservations:
-          cpus: 0.5
-          memory: 50M
+          cpus: "0.5"
+          memory: "50M"
         limits:
-          cpus: 1.0
-          memory: 100M
+          cpus: "1.0"
+          memory: "100M"
         ports:
          - 8008:80
         
