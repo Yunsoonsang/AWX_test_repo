@@ -1,0 +1,7 @@
+---
+- name: test
+  become: yes
+  gather_factors: yes
+
+  tasks:
+  
