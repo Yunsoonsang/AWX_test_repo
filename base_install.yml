@@ -1,0 +1,14 @@
+---
+- name: Setup for the Ansible's Environment
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: pakage installation
+      yum:
+        name: "{{ item.name }}"
+        state: present
+      with_items:
+        - { name: vim }
+        - { name: git }
+        - { name: curl }
