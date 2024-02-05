@@ -19,10 +19,5 @@
         limits:
           cpus: "1.0"
           memory: "100M"
-        endpoint_spec:
-          mode: vip
-          ports:
-            - target_port: 80
-              published_port: 8008
         
 
