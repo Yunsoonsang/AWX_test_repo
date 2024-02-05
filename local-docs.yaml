@@ -6,19 +6,19 @@
 
   tasks:
     - name: web 서비스 배포하기
-    community.docker.docker_swarm_service:
-      name: myweb
-      image: andrewyss/rapaeng4:blue
-      constraints:
-        - node.role == worker
-      replicas: 3
-      publish:
-        published_port: 8008
-        target_port: 80
-      reservations:
-        cpu: 0.5
-        memory: 50M
-      limits:
-        cpus: 1.0
-        memory: 100M
+      community.docker.docker_swarm_service:
+        name: myweb
+        image: andrewyss/rapaeng4:blue
+        constraints:
+          - node.role == worker
+        replicas: 3
+        publish:
+          published_port: 8008
+          target_port: 80
+        reservations:
+          cpu: 0.5
+          memory: 50M
+        limits:
+          cpus: 1.0
+          memory: 100M
 
