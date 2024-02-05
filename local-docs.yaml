@@ -6,13 +6,13 @@
 
   tasks:
     - name: web 서비스 배포하기
-      community.docker.docker_swarm_service:
+      docker_swarm_service:
         name: myweb
         image: andrewyss/rapaeng4:blue
         placement:
           constraints:
             - node.role == worker
-          replicas_max_per_node: 3
+        replicas: 3
         reservations:
           cpus: "0.5"
           memory: "50M"
