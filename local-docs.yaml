@@ -8,7 +8,7 @@
 
   tasks:
     - name: web 서비스 배포하기
-      community.docker.docker_swarm_service:
+      docker_swarm_service:
         name: myweb
         image: andrewyss/rapaeng4:blue
         placement:
