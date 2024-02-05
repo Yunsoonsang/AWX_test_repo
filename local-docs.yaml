@@ -1,5 +1,5 @@
 ---
-- name: AWX에서 로컬 manager에게 docker-swarm 명령 보내기.
+- name: AWX에서 로컬 manager에게 docker-swarm 명령 보내기
   host: localhost
   become: yes
   gather_facts: yes
