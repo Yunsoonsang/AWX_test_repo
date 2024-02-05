@@ -1,0 +1,10 @@
+---
+- name: 웹서버 설치
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: nginx
+      apt:
+        name: nginx
+        state: absent
