@@ -1,5 +1,7 @@
 ---
 - name: AWX에서 로컬 manager에게 docker-swarm 명령 보내기
+  vars:
+    ansible_python_interpreter: /usr/bin/python3.6
   hosts: localhost
   become: yes
   gather_facts: yes
